@@ -14,6 +14,7 @@ namespace SentryOne.UnitTestGenerator.Core.Tests.Frameworks
         private IMockingFramework _mockingFramework;
         private IGenerationContext _context;
         private string _testTypeNaming;
+        private ITestNamingConventions _testNamingConventions;
 
         [SetUp]
         public void SetUp()
@@ -22,32 +23,34 @@ namespace SentryOne.UnitTestGenerator.Core.Tests.Frameworks
             _mockingFramework = Substitute.For<IMockingFramework>();
             _context = Substitute.For<IGenerationContext>();
             _testTypeNaming = "TestValue455103231";
-            _testClass = new FrameworkSet(_testFramework, _mockingFramework, _context, _testTypeNaming);
+            _testNamingConventions = new TestNamingConventions("{0}_Succeeds", "{0}_PerformsMapping", "{0}_ThrowsForNull{1}", "{0}_ThrowsForInvalid{1}");
+
+            _testClass = new FrameworkSet(_testFramework, _mockingFramework, _context, _testTypeNaming, _testNamingConventions);
         }
 
         [Test]
         public void CanConstruct()
         {
-            var instance = new FrameworkSet(_testFramework, _mockingFramework, _context, _testTypeNaming);
+            var instance = new FrameworkSet(_testFramework, _mockingFramework, _context, _testTypeNaming, _testNamingConventions);
             Assert.That(instance, Is.Not.Null);
         }
 
         [Test]
         public void CannotConstructWithNullTestFramework()
         {
-            Assert.Throws<ArgumentNullException>(() => new FrameworkSet(default(ITestFramework), Substitute.For<IMockingFramework>(), Substitute.For<IGenerationContext>(), "TestValue1808135505"));
+            Assert.Throws<ArgumentNullException>(() => new FrameworkSet(default(ITestFramework), Substitute.For<IMockingFramework>(), Substitute.For<IGenerationContext>(), "TestValue1808135505", _testNamingConventions));
         }
 
         [Test]
         public void CannotConstructWithNullMockingFramework()
         {
-            Assert.Throws<ArgumentNullException>(() => new FrameworkSet(Substitute.For<ITestFramework>(), default(IMockingFramework), Substitute.For<IGenerationContext>(), "TestValue888012024"));
+            Assert.Throws<ArgumentNullException>(() => new FrameworkSet(Substitute.For<ITestFramework>(), default(IMockingFramework), Substitute.For<IGenerationContext>(), "TestValue888012024", _testNamingConventions));
         }
 
         [Test]
         public void CannotConstructWithNullContext()
         {
-            Assert.Throws<ArgumentNullException>(() => new FrameworkSet(Substitute.For<ITestFramework>(), Substitute.For<IMockingFramework>(), default(IGenerationContext), "TestValue1975092699"));
+            Assert.Throws<ArgumentNullException>(() => new FrameworkSet(Substitute.For<ITestFramework>(), Substitute.For<IMockingFramework>(), default(IGenerationContext), "TestValue1975092699", _testNamingConventions));
         }
 
         [TestCase(null)]
@@ -55,7 +58,13 @@ namespace SentryOne.UnitTestGenerator.Core.Tests.Frameworks
         [TestCase("   ")]
         public void CannotConstructWithInvalidTestTypeNaming(string value)
         {
-            Assert.Throws<ArgumentNullException>(() => new FrameworkSet(Substitute.For<ITestFramework>(), Substitute.For<IMockingFramework>(), Substitute.For<IGenerationContext>(), value));
+            Assert.Throws<ArgumentNullException>(() => new FrameworkSet(Substitute.For<ITestFramework>(), Substitute.For<IMockingFramework>(), Substitute.For<IGenerationContext>(), value, _testNamingConventions));
+        }
+
+        [Test]
+        public void CannotConstructWithNullTestNamingConventions()
+        {
+            Assert.Throws<ArgumentNullException>(() => new FrameworkSet(Substitute.For<ITestFramework>(), Substitute.For<IMockingFramework>(), Substitute.For<IGenerationContext>(), "TestValue1975092699", null));
         }
 
         [Test]
@@ -80,6 +89,12 @@ namespace SentryOne.UnitTestGenerator.Core.Tests.Frameworks
         public void TestTypeNamingIsInitializedCorrectly()
         {
             Assert.That(_testClass.TestTypeNaming, Is.EqualTo(_testTypeNaming));
+        }
+
+        [Test]
+        public void TestNamingConventionsIsInitializedCorrectly()
+        {
+            Assert.That(_testClass.TestNamingConventions, Is.EqualTo(_testNamingConventions));
         }
     }
 }

@@ -11,5 +11,7 @@
         IGenerationContext Context { get; }
 
         string TestTypeNaming { get; }
+
+        ITestNamingConventions TestNamingConventions { get; }
     }
 }

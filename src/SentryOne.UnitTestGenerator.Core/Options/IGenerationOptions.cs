@@ -17,5 +17,13 @@
         string TestFileNaming { get; }
 
         string TestTypeNaming { get; }
+
+        string CanCallMethodNaming { get; }
+
+        string PerformsMappingMethodNaming { get; }
+
+        string CannotCallWithNullArgumentNaming { get; }
+
+        string StringParameterValueCheckNaming { get; }
     }
 }

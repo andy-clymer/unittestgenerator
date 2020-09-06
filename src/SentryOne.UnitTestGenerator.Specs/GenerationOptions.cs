@@ -18,5 +18,9 @@
         public string TestProjectNaming { get; } = "{0}.Tests";
         public string TestFileNaming { get; } = "{0}Tests";
         public string TestTypeNaming { get; } = "{0}Tests";
+        public string CanCallMethodNaming { get; } = "CanCall{0}";
+        public string PerformsMappingMethodNaming { get; } = "{0}PerformsMapping";
+        public string CannotCallWithNullArgumentNaming { get; } = "CannotCall{0}WithNull{1}";
+        public string StringParameterValueCheckNaming { get; } = "CannotCall{0}WithInvalid{1}";
     }
 }

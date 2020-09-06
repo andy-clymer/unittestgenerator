@@ -52,7 +52,7 @@
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var methodName = string.Format(CultureInfo.InvariantCulture, "CanCall{0}", model.GetMethodUniqueName(method));
+            var methodName = string.Format(CultureInfo.InvariantCulture, _frameworkSet.TestNamingConventions.CanCallMethodNaming, model.GetMethodUniqueName(method));
 
             var generatedMethod = _frameworkSet.TestFramework.CreateTestMethod(methodName, method.IsAsync, model.IsStatic);
 

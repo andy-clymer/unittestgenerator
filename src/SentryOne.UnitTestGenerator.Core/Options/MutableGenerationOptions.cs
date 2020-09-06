@@ -19,6 +19,10 @@
             TestProjectNaming = options.TestProjectNaming;
             TestFileNaming = options.TestFileNaming;
             TestTypeNaming = options.TestTypeNaming;
+            CanCallMethodNaming = options.CanCallMethodNaming;
+            PerformsMappingMethodNaming = options.PerformsMappingMethodNaming;
+            CannotCallWithNullArgumentNaming = options.CannotCallWithNullArgumentNaming;
+            StringParameterValueCheckNaming = options.StringParameterValueCheckNaming;
         }
 
         public TestFrameworkTypes FrameworkType { get; set; }
@@ -36,5 +40,13 @@
         public string TestFileNaming { get; set; }
 
         public string TestTypeNaming { get; set; }
+
+        public string CanCallMethodNaming { get; set; }
+
+        public string PerformsMappingMethodNaming { get; set; }
+
+        public string CannotCallWithNullArgumentNaming { get; set; }
+
+        public string StringParameterValueCheckNaming { get; set; }
     }
 }

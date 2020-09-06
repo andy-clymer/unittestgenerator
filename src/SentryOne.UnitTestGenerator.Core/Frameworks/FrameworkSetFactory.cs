@@ -17,7 +17,7 @@
             }
 
             var context = new GenerationContext();
-            return new FrameworkSet(Create(options.GenerationOptions.FrameworkType), Create(options.GenerationOptions.MockingFrameworkType, context), context, options.GenerationOptions.TestTypeNaming);
+            return new FrameworkSet(Create(options.GenerationOptions.FrameworkType), Create(options.GenerationOptions.MockingFrameworkType, context), context, options.GenerationOptions.TestTypeNaming, TestNamingConventions.FromGenerationOptions(options.GenerationOptions));
         }
 
         private static IMockingFramework Create(MockingFrameworkType mockingFrameworkType, IGenerationContext context)

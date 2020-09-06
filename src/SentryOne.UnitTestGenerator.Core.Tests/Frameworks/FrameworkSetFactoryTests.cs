@@ -42,6 +42,26 @@ namespace SentryOne.UnitTestGenerator.Core.Tests.Frameworks
         }
 
         [Test]
+        public static void CreateDerivesNamingConventionsFromOptions()
+        {
+            var options = Substitute.For<IUnitTestGeneratorOptions>();
+            options.GenerationOptions.TestTypeNaming.Returns("{0}Tests");
+            options.GenerationOptions.FrameworkType.Returns(TestFrameworkTypes.NUnit2);
+            options.GenerationOptions.MockingFrameworkType.Returns(MockingFrameworkType.Moq);
+            options.GenerationOptions.CannotCallWithNullArgumentNaming.Returns("{0}_ThrowsForNull{1}");
+            options.GenerationOptions.CanCallMethodNaming.Returns("{0}_CanBeCalled");
+            options.GenerationOptions.StringParameterValueCheckNaming.Returns("{0}_ThrowsForInvalid{1}");
+            options.GenerationOptions.PerformsMappingMethodNaming.Returns("{0}_PerformsMapping");
+
+            var result = FrameworkSetFactory.Create(options);
+            Assert.That(result.TestNamingConventions, Is.Not.Null);
+            Assert.That(result.TestNamingConventions.CannotCallWithNullArgumentNaming, Is.EqualTo("{0}_ThrowsForNull{1}"));
+            Assert.That(result.TestNamingConventions.CanCallMethodNaming, Is.EqualTo("{0}_CanBeCalled"));
+            Assert.That(result.TestNamingConventions.StringParameterValueCheckNaming, Is.EqualTo("{0}_ThrowsForInvalid{1}"));
+            Assert.That(result.TestNamingConventions.PerformsMappingMethodNaming, Is.EqualTo("{0}_PerformsMapping"));
+        }
+
+        [Test]
         public static void CannotCallCreateWithInvalidMockingFramework()
         {
             var options = Substitute.For<IUnitTestGeneratorOptions>();

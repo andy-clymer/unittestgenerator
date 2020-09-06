@@ -100,6 +100,10 @@
             options.GenerationOptions.TestFileNaming.Returns("{0}Tests");
             options.GenerationOptions.TestTypeNaming.Returns("{0}Tests");
             options.GenerationOptions.TestProjectNaming.Returns("{0}.Tests");
+            options.GenerationOptions.CanCallMethodNaming.Returns("{0}_CanBeCalled");
+            options.GenerationOptions.PerformsMappingMethodNaming.Returns("{0}_PerformsMapping");
+            options.GenerationOptions.CannotCallWithNullArgumentNaming.Returns("{0}_ThrowsForNull{1}");
+            options.GenerationOptions.StringParameterValueCheckNaming.Returns("{0}_ThrowsForInvalid{1}");
             var core = await CoreGenerator.Generate(semanticModel, null, null, false, options, x => "Tests").ConfigureAwait(true);
 
             Assert.IsNotNull(core);

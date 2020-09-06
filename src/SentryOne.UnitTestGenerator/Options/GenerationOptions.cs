@@ -46,5 +46,25 @@ namespace SentryOne.UnitTestGenerator.Options
         [DisplayName("Type naming convention")]
         [Description("Format string that converts the source type name to the unit test type name")]
         public string TestTypeNaming { get; set; } = "{0}Tests";
+
+        [Category("Naming")]
+        [DisplayName("Main test method naming convention")]
+        [Description("Format string that converts the source method name to the main unit test method name")]
+        public string CanCallMethodNaming { get; set; } = "CanCall{0}";
+
+        [Category("Naming")]
+        [DisplayName("Mapping test method naming convention")]
+        [Description("Format string that converts the source method name to the mapping unit test method name")]
+        public string PerformsMappingMethodNaming { get; } = "{0}PerformsMapping";
+
+        [Category("Naming")]
+        [DisplayName("Null parameter check test method naming convention")]
+        [Description("Format string that converts the source method and parameter name to the unit test method name")]
+        public string CannotCallWithNullArgumentNaming { get; } = "CannotCall{0}WithNull{1}";
+
+        [Category("Naming")]
+        [DisplayName("String NullOrWhitespace parameter check test method naming convention")]
+        [Description("Format string that converts the source method and parameter name to the unit test method name")]
+        public string StringParameterValueCheckNaming { get; } = "CannotCall{0}WithInvalid{1}";
     }
 }

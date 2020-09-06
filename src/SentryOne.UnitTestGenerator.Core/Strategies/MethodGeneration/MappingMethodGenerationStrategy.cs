@@ -93,7 +93,7 @@
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var methodName = string.Format(CultureInfo.InvariantCulture, "{0}PerformsMapping", model.GetMethodUniqueName(method));
+            var methodName = string.Format(CultureInfo.InvariantCulture, _frameworkSet.TestNamingConventions.PerformsMappingMethodNaming, model.GetMethodUniqueName(method));
 
             var generatedMethod = _frameworkSet.TestFramework.CreateTestMethod(methodName, method.IsAsync, model.IsStatic);
 
