@@ -115,7 +115,7 @@ namespace WindowsFormsApp1
  testRunner.When("I generate unit tests for the class using strategy \'CanConstructSingleConstructor" +
                     "GenerationStrategy\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 40
- testRunner.Then("I expect a method called \'CanConstruct\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect a method called \'CanCallConstructor\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 41
   testRunner.And("I expect it to contain 1 statements called \'Assert.NotNull(instance);\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden

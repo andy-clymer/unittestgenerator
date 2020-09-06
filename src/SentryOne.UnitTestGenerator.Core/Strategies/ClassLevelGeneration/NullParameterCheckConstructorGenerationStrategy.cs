@@ -55,7 +55,7 @@
 
             foreach (var nullableParameter in nullableParameters)
             {
-                var methodName = string.Format(CultureInfo.InvariantCulture, "CannotConstructWithNull{0}", nullableParameter.ToPascalCase());
+                var methodName = string.Format(CultureInfo.InvariantCulture, _frameworkSet.TestNamingConventions.CannotCallWithNullArgumentNaming, "Constructor", nullableParameter.ToPascalCase());
                 var generatedMethod = _frameworkSet.TestFramework.CreateTestMethod(methodName, false, false);
 
                 foreach (var constructorModel in model.Constructors.Where(x => x.Parameters.Any(p => string.Equals(p.Name, nullableParameter, StringComparison.OrdinalIgnoreCase))))

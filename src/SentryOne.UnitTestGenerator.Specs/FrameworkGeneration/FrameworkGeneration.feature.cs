@@ -473,7 +473,7 @@ public IEnumerator<int> GetEnumerator()
  testRunner.When("I generate unit tests for the class using strategy \'CanConstructSingleConstructor" +
                     "GenerationStrategy\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 330
- testRunner.Then("I expect a method called \'CanConstruct\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect a method called \'CanCallConstructor\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 331
   testRunner.And(string.Format("I expect it to contain the statement \'{0}\'", statement), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden

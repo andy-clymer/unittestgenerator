@@ -21,7 +21,7 @@ namespace SentryOne.UnitTestGenerator.Core.Tests.Strategies.InterfaceGeneration
         public void SetUp()
         {
             var generationContext = new GenerationContext();
-            var namingConventions = new TestNamingConventions("{0}_Succeeds", "{0}_PerformsMapping", "{0}_ThrowsForNull{1}", "{0}_ThrowsForInvalid{1}");
+            var namingConventions = new TestNamingConventions("{0}_Succeeds", "{0}_PerformsMapping", "{0}_ThrowsForNull{1}", "{0}_ThrowsForInvalid{1}", "{0}_CanSet", "{0}_CanGet", "{0}_CanSetAndGet", "{0}_IsInitializedCorrectly");
 
             _frameworkSet = new FrameworkSet(new NUnit3TestFramework(), new NSubstituteMockingFramework(generationContext), generationContext, "{0}Tests", namingConventions);
             _testClass = new ComparableGenerationStrategy(_frameworkSet);

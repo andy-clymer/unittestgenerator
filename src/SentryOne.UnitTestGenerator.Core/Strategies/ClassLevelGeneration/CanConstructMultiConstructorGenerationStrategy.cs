@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Globalization;
     using System.Linq;
     using Microsoft.CodeAnalysis;
     using Microsoft.CodeAnalysis.CSharp;
@@ -51,7 +52,8 @@
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var generatedMethod = _frameworkSet.TestFramework.CreateTestMethod("CanConstruct", false, false);
+            var methodName = string.Format(CultureInfo.InvariantCulture, _frameworkSet.TestNamingConventions.CanCallMethodNaming, "Constructor");
+            var generatedMethod = _frameworkSet.TestFramework.CreateTestMethod(methodName, false, false);
 
             bool isFirst = true;
             foreach (var constructor in model.Constructors)

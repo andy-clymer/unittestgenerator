@@ -44,5 +44,5 @@ namespace TestNamespace.Tests
 	And I set my test framework to 'NUnit3'
 	And I set my mock framework to 'NSubstitute'
 	When I regenerate tests for all constructors
-	Then I expect the method 'CanConstruct'
+	Then I expect the method 'CanCallConstructor'
     And I expect only one generic type alias

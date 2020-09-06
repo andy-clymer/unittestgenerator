@@ -261,6 +261,7 @@
     <Compile Include="Frameworks\Mocking\MoqMockingFrameworkTests.cs" />
     <Compile Include="Frameworks\Mocking\NSubstituteMockingFrameworkTests.cs" />
     <Compile Include="Frameworks\Mocking\RhinoMocksMockingFrameworkTests.cs" />
+    <Compile Include="Frameworks\TestNamingConventionsTests.cs" />
     <Compile Include="Frameworks\Test\MsTestTestFrameworkTests.cs" />
     <Compile Include="Frameworks\Test\NUnit2TestFrameworkTests.cs" />
     <Compile Include="Frameworks\Test\NUnit3TestFrameworkTests.cs" />

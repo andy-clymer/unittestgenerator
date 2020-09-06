@@ -37,5 +37,5 @@ namespace WindowsFormsApp1
 	And I set my test framework to 'XUnit'
 	And I set my mock framework to 'NSubstitute'
 	When I generate unit tests for the class using strategy 'CanConstructSingleConstructorGenerationStrategy'
-	Then I expect a method called 'CanConstruct'
+	Then I expect a method called 'CanCallConstructor'
 		And I expect it to contain 1 statements called 'Assert.NotNull(instance);'

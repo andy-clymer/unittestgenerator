@@ -45,7 +45,7 @@ public class TestClass
 	And I set my test framework to 'MS Test'
 	And I set my mock framework to 'NSubstitute'
 	When I generate unit tests for the class using strategy 'StringParameterCheckConstructorGenerationStrategy'
-	Then I expect a method called 'CannotConstructWithInvalidStringProp'
+	Then I expect a method called 'CannotCallConstructorWithInvalidStringProp'
 		And I expect it to have the attribute 'DataTestMethod'
 		And I expect it to have the attribute 'DataRow(null)'
 		And I expect it to have the attribute 'DataRow("")'

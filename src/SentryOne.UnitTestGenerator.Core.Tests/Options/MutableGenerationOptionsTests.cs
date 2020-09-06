@@ -110,5 +110,69 @@ namespace SentryOne.UnitTestGenerator.Core.Tests.Options
             _testClass.TestTypeNaming = testValue;
             Assert.That(_testClass.TestTypeNaming, Is.EqualTo(testValue));
         }
+
+        [Test]
+        public void CanSetAndGetCanCallMethodNaming()
+        {
+            var testValue = "TestValue368040285";
+            _testClass.CanCallMethodNaming = testValue;
+            Assert.That(_testClass.CanCallMethodNaming, Is.EqualTo(testValue));
+        }
+
+        [Test]
+        public void CanSetAndGetPerformsMappingMethodNaming()
+        {
+            var testValue = "TestValue665277815";
+            _testClass.PerformsMappingMethodNaming = testValue;
+            Assert.That(_testClass.PerformsMappingMethodNaming, Is.EqualTo(testValue));
+        }
+
+        [Test]
+        public void CanSetAndGetCannotCallWithNullArgumentNaming()
+        {
+            var testValue = "TestValue1549359554";
+            _testClass.CannotCallWithNullArgumentNaming = testValue;
+            Assert.That(_testClass.CannotCallWithNullArgumentNaming, Is.EqualTo(testValue));
+        }
+
+        [Test]
+        public void CanSetAndGetStringParameterValueCheckNaming()
+        {
+            var testValue = "TestValue1629328489";
+            _testClass.StringParameterValueCheckNaming = testValue;
+            Assert.That(_testClass.StringParameterValueCheckNaming, Is.EqualTo(testValue));
+        }
+
+        [Test]
+        public void CanSetAndGetCanSetNaming()
+        {
+            var testValue = "TestValue2136908242";
+            _testClass.CanSetNaming = testValue;
+            Assert.That(_testClass.CanSetNaming, Is.EqualTo(testValue));
+        }
+
+        [Test]
+        public void CanSetAndGetCanGetNaming()
+        {
+            var testValue = "TestValue747518191";
+            _testClass.CanGetNaming = testValue;
+            Assert.That(_testClass.CanGetNaming, Is.EqualTo(testValue));
+        }
+
+        [Test]
+        public void CanSetAndGetCanSetAndGetNaming()
+        {
+            var testValue = "TestValue1072006168";
+            _testClass.CanSetAndGetNaming = testValue;
+            Assert.That(_testClass.CanSetAndGetNaming, Is.EqualTo(testValue));
+        }
+
+        [Test]
+        public void CanSetAndGetIsInitializedCorrectlyNaming()
+        {
+            var testValue = "TestValue1750846796";
+            _testClass.IsInitializedCorrectlyNaming = testValue;
+            Assert.That(_testClass.IsInitializedCorrectlyNaming, Is.EqualTo(testValue));
+        }
     }
 }

@@ -23,7 +23,7 @@ namespace SentryOne.UnitTestGenerator.Core.Tests.Frameworks
             _mockingFramework = Substitute.For<IMockingFramework>();
             _context = Substitute.For<IGenerationContext>();
             _testTypeNaming = "TestValue455103231";
-            _testNamingConventions = new TestNamingConventions("{0}_Succeeds", "{0}_PerformsMapping", "{0}_ThrowsForNull{1}", "{0}_ThrowsForInvalid{1}");
+            _testNamingConventions = new TestNamingConventions("{0}_Succeeds", "{0}_PerformsMapping", "{0}_ThrowsForNull{1}", "{0}_ThrowsForInvalid{1}", "{0}_CanSet", "{0}_CanGet", "{0}_CanSetAndGet", "{0}_IsInitializedCorrectly");
 
             _testClass = new FrameworkSet(_testFramework, _mockingFramework, _context, _testTypeNaming, _testNamingConventions);
         }

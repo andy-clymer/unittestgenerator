@@ -56,7 +56,7 @@
 
             foreach (var nullableParameter in nullableParameters)
             {
-                var methodName = string.Format(CultureInfo.InvariantCulture, "CannotConstructWithInvalid{0}", nullableParameter.ToPascalCase());
+                var methodName = string.Format(CultureInfo.InvariantCulture, _frameworkSet.TestNamingConventions.StringParameterValueCheckNaming, "Constructor", nullableParameter.ToPascalCase());
                 var generatedMethod = _frameworkSet.TestFramework.CreateTestCaseMethod(methodName, false, false, SyntaxFactory.PredefinedType(SyntaxFactory.Token(SyntaxKind.StringKeyword)), new object[] { null, string.Empty, "   " });
 
                 foreach (var constructorModel in model.Constructors.Where(x => x.Parameters.Any(p => string.Equals(p.Name, nullableParameter, StringComparison.OrdinalIgnoreCase))))

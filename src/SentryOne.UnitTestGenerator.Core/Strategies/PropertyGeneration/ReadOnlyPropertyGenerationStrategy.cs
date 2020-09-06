@@ -53,7 +53,7 @@
 
             var target = property.IsStatic ? model.TypeSyntax : model.TargetInstance;
 
-            var method = _frameworkSet.TestFramework.CreateTestMethod(string.Format(CultureInfo.InvariantCulture, "CanGet{0}", property.Name), false, model.IsStatic)
+            var method = _frameworkSet.TestFramework.CreateTestMethod(string.Format(CultureInfo.InvariantCulture, _frameworkSet.TestNamingConventions.CanGetNaming, property.Name), false, model.IsStatic)
                 .AddBodyStatements(_frameworkSet.TestFramework.AssertIsInstanceOf(Generate.PropertyAccess(target, property.Name), property.TypeInfo.ToTypeSyntax(_frameworkSet.Context)))
                 .AddBodyStatements(_frameworkSet.TestFramework.AssertFail(Strings.PlaceholderAssertionMessage));
 

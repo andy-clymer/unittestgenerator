@@ -23,6 +23,10 @@
             PerformsMappingMethodNaming = options.PerformsMappingMethodNaming;
             CannotCallWithNullArgumentNaming = options.CannotCallWithNullArgumentNaming;
             StringParameterValueCheckNaming = options.StringParameterValueCheckNaming;
+            CanSetNaming = options.CanSetNaming;
+            CanGetNaming = options.CanGetNaming;
+            CanSetAndGetNaming = options.CanSetAndGetNaming;
+            IsInitializedCorrectlyNaming = options.IsInitializedCorrectlyNaming;
         }
 
         public TestFrameworkTypes FrameworkType { get; set; }
@@ -48,5 +52,13 @@
         public string CannotCallWithNullArgumentNaming { get; set; }
 
         public string StringParameterValueCheckNaming { get; set; }
+
+        public string CanSetNaming { get; set; }
+
+        public string CanGetNaming { get; set; }
+
+        public string CanSetAndGetNaming { get; set; }
+
+        public string IsInitializedCorrectlyNaming { get; set; }
     }
 }

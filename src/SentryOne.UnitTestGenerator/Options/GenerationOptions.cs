@@ -66,5 +66,25 @@ namespace SentryOne.UnitTestGenerator.Options
         [DisplayName("String NullOrWhitespace parameter check test method naming convention")]
         [Description("Format string that converts the source method and parameter name to the unit test method name")]
         public string StringParameterValueCheckNaming { get; } = "CannotCall{0}WithInvalid{1}";
+
+        [Category("Naming")]
+        [DisplayName("Set check test method naming convention")]
+        [Description("Format string that converts the source property name to the write unit test method name")]
+        public string CanSetNaming { get; } = "CanSet{0}";
+
+        [Category("Naming")]
+        [DisplayName("Get check test method naming convention")]
+        [Description("Format string that converts the source property name to the read unit test method name")]
+        public string CanGetNaming { get; } = "CanGet{0}";
+
+        [Category("Naming")]
+        [DisplayName("Set and Get check test method naming convention")]
+        [Description("Format string that converts the source property name to the write and read unit test method name")]
+        public string CanSetAndGetNaming { get; } = "CanSetAndGet{0}";
+
+        [Category("Naming")]
+        [DisplayName("Property initialization check test method naming convention")]
+        [Description("Format string that converts the source property name to the intialization check unit test method name")]
+        public string IsInitializedCorrectlyNaming { get; } = "{0}IsInitializedCorrectly";
     }
 }

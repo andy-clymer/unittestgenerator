@@ -123,7 +123,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I generate unit tests for the class using strategy \'StringParameterCheckConstruct" +
                     "orGenerationStrategy\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 48
- testRunner.Then("I expect a method called \'CannotConstructWithInvalidStringProp\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect a method called \'CannotCallConstructorWithInvalidStringProp\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 49
   testRunner.And("I expect it to have the attribute \'DataTestMethod\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 50

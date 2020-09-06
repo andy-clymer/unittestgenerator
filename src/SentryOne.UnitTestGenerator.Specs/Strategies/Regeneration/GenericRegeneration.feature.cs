@@ -111,7 +111,7 @@ public class TestClass_1Tests
 #line 46
  testRunner.When("I regenerate tests for all constructors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 47
- testRunner.Then("I expect the method \'CanConstruct\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect the method \'CanCallConstructor\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 48
     testRunner.And("I expect only one generic type alias", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden

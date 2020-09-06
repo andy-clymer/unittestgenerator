@@ -116,7 +116,7 @@ using System;
  testRunner.When("I generate unit tests for the class using strategy \'CanConstructNoConstructorGene" +
                     "rationStrategy\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 41
- testRunner.Then("I expect a method called \'CanConstruct\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect a method called \'CanCallConstructor\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 42
   testRunner.And("I expect it to contain the statement \'var instance = new SomePoco();\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 43

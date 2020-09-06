@@ -45,6 +45,6 @@ public class TestClass
 	And I set my test framework to 'MS Test'
 	And I set my mock framework to 'Moq'
 	When I generate unit tests for the class using strategy 'NullParameterCheckConstructorGenerationStrategy'
-	Then I expect a method called 'CannotConstructWithNullITest'
+	Then I expect a method called 'CannotCallConstructorWithNullITest'
 		And I expect it to have the attribute 'TestMethod'
 		And I expect it to contain a statement like 'Assert.ThrowsException<ArgumentNullException>(() => new TestClass({{{AnyString}}}, default(ITest)));'

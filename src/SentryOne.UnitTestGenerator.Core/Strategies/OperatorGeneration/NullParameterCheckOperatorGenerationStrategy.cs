@@ -61,7 +61,7 @@
 
                 var paramList = new List<CSharpSyntaxNode>();
 
-                var methodName = string.Format(CultureInfo.InvariantCulture, "CannotCall{0}OperatorWithNull{1}", method.Name, method.Parameters[i].Name.ToPascalCase());
+                var methodName = string.Format(CultureInfo.InvariantCulture, _frameworkSet.TestNamingConventions.CannotCallWithNullArgumentNaming, $"{method.Name}Operator", method.Parameters[i].Name.ToPascalCase());
                 var generatedMethod = _frameworkSet.TestFramework.CreateTestMethod(methodName, false, model.IsStatic);
 
                 for (var index = 0; index < method.Parameters.Count; index++)

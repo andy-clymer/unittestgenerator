@@ -45,7 +45,7 @@ public class TestClass
 	And I set my test framework to 'XUnit'
 	And I set my mock framework to 'RhinoMocks'
 	When I generate unit tests for the class using strategy 'CanConstructMultiConstructorGenerationStrategy'
-	Then I expect a method called 'CanConstruct'
+	Then I expect a method called 'CanCallConstructor'
 		And I expect it to contain the statement 'var instance = new TestClass(_stringProp, _iTest);'
 		And I expect it to contain the statement 'instance = new TestClass(_nullableIntProp, _iTest);'
 		And I expect it to contain the statement 'instance = new TestClass(_thisIsAProperty, _iTest);'

@@ -50,7 +50,7 @@
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var methodName = string.Format(CultureInfo.InvariantCulture, "CanCall{0}Operator", method.Name);
+            var methodName = string.Format(CultureInfo.InvariantCulture, _frameworkSet.TestNamingConventions.CanCallMethodNaming, $"{method.Name}Operator");
 
             var generatedMethod = _frameworkSet.TestFramework.CreateTestMethod(methodName, false, model.IsStatic);
 

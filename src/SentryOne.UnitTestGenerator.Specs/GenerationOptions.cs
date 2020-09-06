@@ -22,5 +22,9 @@
         public string PerformsMappingMethodNaming { get; } = "{0}PerformsMapping";
         public string CannotCallWithNullArgumentNaming { get; } = "CannotCall{0}WithNull{1}";
         public string StringParameterValueCheckNaming { get; } = "CannotCall{0}WithInvalid{1}";
+        public string CanSetNaming { get; } = "CanSet{0}";
+        public string CanGetNaming { get; } = "CanGet{0}";
+        public string CanSetAndGetNaming { get; } = "CanSetAndGet{0}";
+        public string IsInitializedCorrectlyNaming { get; } = "{0}IsInitializedCorrectly";
     }
 }

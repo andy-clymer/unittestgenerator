@@ -38,6 +38,6 @@ namespace TestNamespace.SubNameSpace
 	And I set my test framework to 'XUnit'
 	And I set my mock framework to 'FakeItEasy'
 	When I generate unit tests for the class using strategy 'CanConstructNoConstructorGenerationStrategy'
-	Then I expect a method called 'CanConstruct'
+	Then I expect a method called 'CanCallConstructor'
 		And I expect it to contain the statement 'var instance = new SomePoco();'
 		And I expect it to contain 1 statements called 'Assert.NotNull(instance);'

@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Globalization;
     using System.Linq;
     using Microsoft.CodeAnalysis.CSharp;
     using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -50,7 +51,8 @@
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var generatedMethod = _frameworkSet.TestFramework.CreateTestMethod("CanConstruct", false, false);
+            var methodName = string.Format(CultureInfo.InvariantCulture, _frameworkSet.TestNamingConventions.CanCallMethodNaming, "Constructor");
+            var generatedMethod = _frameworkSet.TestFramework.CreateTestMethod(methodName, false, false);
 
             var tokenList = model.DefaultConstructor.Parameters.Select(parameter => SyntaxFactory.IdentifierName(model.GetConstructorParameterFieldName(parameter))).Cast<ExpressionSyntax>().ToList();
 

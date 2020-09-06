@@ -1,8 +1,8 @@
 namespace SentryOne.UnitTestGenerator.Core.Tests.Options
 {
-    using SentryOne.UnitTestGenerator.Core.Options;
     using System;
     using NUnit.Framework;
+    using SentryOne.UnitTestGenerator.Core.Options;
 
     [TestFixture]
     public class TypeMemberMutatorTests

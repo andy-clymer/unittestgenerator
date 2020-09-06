@@ -51,7 +51,7 @@
                 throw new ArgumentNullException(nameof(model));
             }
 
-            var methodName = string.Format(CultureInfo.InvariantCulture, "CanSet{0}", model.GetIndexerName(indexer));
+            var methodName = string.Format(CultureInfo.InvariantCulture, _frameworkSet.TestNamingConventions.CanSetNaming, model.GetIndexerName(indexer));
             var method = _frameworkSet.TestFramework.CreateTestMethod(methodName, false, model.IsStatic)
                 .AddBodyStatements(GetPropertyAssertionBodyStatements(indexer, model).ToArray());
 

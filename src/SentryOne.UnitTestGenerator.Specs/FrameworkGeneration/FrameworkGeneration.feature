@@ -327,7 +327,7 @@ namespace WindowsFormsApp1
 	And I set my test framework to '<framework>'
 	And I set my mock framework to 'Moq'
 	When I generate unit tests for the class using strategy 'CanConstructSingleConstructorGenerationStrategy'
-	Then I expect a method called 'CanConstruct'
+	Then I expect a method called 'CanCallConstructor'
 		And I expect it to contain the statement '<statement>'
 
 	Examples:

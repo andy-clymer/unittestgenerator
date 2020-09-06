@@ -123,7 +123,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.When("I generate unit tests for the class using strategy \'NullParameterCheckConstructor" +
                     "GenerationStrategy\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 48
- testRunner.Then("I expect a method called \'CannotConstructWithNullITest\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect a method called \'CannotCallConstructorWithNullITest\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 49
   testRunner.And("I expect it to have the attribute \'TestMethod\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 50

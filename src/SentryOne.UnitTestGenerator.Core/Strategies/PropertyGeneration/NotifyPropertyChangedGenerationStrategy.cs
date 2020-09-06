@@ -59,7 +59,7 @@
 
             model.RequiredAssets.Add(TargetAsset.PropertyTester);
 
-            var methodName = string.Format(CultureInfo.InvariantCulture, "CanSetAndGet{0}", property.Name);
+            var methodName = string.Format(CultureInfo.InvariantCulture, _frameworkSet.TestNamingConventions.CanSetAndGetNaming, property.Name);
             var method = _frameworkSet.TestFramework.CreateTestMethod(methodName, false, model.IsStatic)
                 .AddBodyStatements(GetPropertyAssertionBodyStatements(property, model, withDefaults).ToArray());
 

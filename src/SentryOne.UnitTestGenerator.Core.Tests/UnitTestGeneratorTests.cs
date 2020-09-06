@@ -104,6 +104,10 @@
             options.GenerationOptions.PerformsMappingMethodNaming.Returns("{0}_PerformsMapping");
             options.GenerationOptions.CannotCallWithNullArgumentNaming.Returns("{0}_ThrowsForNull{1}");
             options.GenerationOptions.StringParameterValueCheckNaming.Returns("{0}_ThrowsForInvalid{1}");
+            options.GenerationOptions.CanSetNaming.Returns("{0}_CanSet");
+            options.GenerationOptions.CanGetNaming.Returns("{0}_CanGet");
+            options.GenerationOptions.CanSetAndGetNaming.Returns("{0}_CanSetAndGet");
+            options.GenerationOptions.IsInitializedCorrectlyNaming.Returns("{0}_IsInitializedCorrectly");
             var core = await CoreGenerator.Generate(semanticModel, null, null, false, options, x => "Tests").ConfigureAwait(true);
 
             Assert.IsNotNull(core);
